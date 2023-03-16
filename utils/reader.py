@@ -5,6 +5,6 @@ def read_file():
 
         for row in file_contant.split("\n")[1:-1]:
             file_values.append(row)
-            # print(row)
+      
         return file_values
 
