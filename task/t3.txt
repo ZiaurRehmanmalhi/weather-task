@@ -1,0 +1,3 @@
+
+My name is zia ur rehman i am using vim editor i learn vim editor this is a small task i want this  file on pull request.
+vim editor is a terminal editor it is very healthfull for programers. in the vim editor make a file and type this massage save command is ":w" and go to back terminal command is ":q" and ":qw" comand both work
