@@ -1,2 +1,2 @@
-zia
+print("zia")
 
