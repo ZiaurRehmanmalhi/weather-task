@@ -1,7 +1,7 @@
 from utils.reader import read_file
-csv_file = read_file("/home/zia/ISDP/Hammad sab/Python/wether_Mar/weather task 2 in csv file/files/f2.csv")
+value = read_file("/home/zia/ISDP/Hammad sab/Python/wether_Mar/weather task 2 in csv file/files/f2.csv")
 
-for response in csv_file:
+for response in value:
     date = response.split(",")[1]
     event = response.split(",")[-2]
 
