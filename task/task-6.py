@@ -8,6 +8,6 @@ for response in value:
 
     if event == "Thunderstorm":
         date_str = str(date)
-        convert = datetime.strptime(date_str, "%Y-%m-%d")
-        weekday_names = convert.strftime("%A")
+        convert_date = datetime.strptime(date_str, "%Y-%m-%d")
+        weekday_names = convert_date.strftime("%A")
         print(weekday_names)
