@@ -1,9 +1,12 @@
 from utils.reader import read_file
 
-list_data = read_file()
-for data in list_data:
+
+file_read_csv = read_file("/home/zia/ISDP/Hammad sab/Python/wether_Mar/weather task 2 in csv file/files/f1.csv")
+
+for data in file_read_csv:
     date = data.split(",")[0]
     max_temp = data.split(",")[1]
     min_temp = data.split(",")[3]
     difference = int(max_temp) - int(min_temp)
+
     print(f"date {date} maximum-temp {max_temp} minimum-temp {min_temp} and difference between {difference}")
