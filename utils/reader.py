@@ -1,9 +1,9 @@
-def read_file(path):
-    file_values = []
+def get_file_contents(file_path):
+    file_contents = []
 
-    with open(path) as file_read:
+    with open(file_path) as file_read:
         file_content = file_read.read()
-        for row in file_content.split("\n")[1:-1]:
-            file_values.append(row)
+        for column_value in file_content.split("\n")[1:-1]:
+            file_contents.append(column_value)
 
-    return file_values
+    return file_contents
