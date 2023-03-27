@@ -1,11 +1,13 @@
-from utils.reader import read_file
+from utils.reader import get_file_contents
+from utils.variables import MapperIndexF2
 
 
-value = read_file("/home/zia/ISDP/Hammad sab/Python/wether_Mar/weather task 2 in csv file/files/f2.csv")
+file_path = "../../weather-task/files/f2.csv"
+file_contents = get_file_contents(file_path)
 
-for response in value:
-    date = response.split(",")[1]
-    event = response.split(",")[-2]
+for contents in file_contents:
+    date = contents.split(",")[MapperIndexF2.date]
+    event_list = contents.split(",")[MapperIndexF2.events]
 
-    if event in ["Rain", "Snow", "Rain-Snow"]:
-        print(f"{date}  in  {event}")
+    if event_list in ["Rain", "Snow", "Rain-Snow"]:     # This is a main logic of this code
+        print(f"{date}  in  {event_list}")

@@ -1,12 +1,16 @@
-from utils.reader import read_file
+from utils.reader import get_file_contents
+from utils.variables import MapperIndexF1
 
+file_path = "../../weather-task/files/f1.csv"
+file_contents = get_file_contents(file_path)
 
-file_read_csv = read_file("/home/zia/ISDP/Hammad sab/Python/wether_Mar/weather task 2 in csv file/files/f1.csv")
+for contents in file_contents:
+    date = contents.split(",")[MapperIndexF1.date]
+    max_temperature = contents.split(",")[MapperIndexF1.max_temperature]
+    min_temperature = contents.split(",")[MapperIndexF1.min_temperature]
+    difference = int(max_temperature) - int(min_temperature)  # This line get calculation and convert to integer.
 
-for data in file_read_csv:
-    date = data.split(",")[0]
-    max_temp = data.split(",")[1]
-    min_temp = data.split(",")[3]
-    difference = int(max_temp) - int(min_temp)
-
-    print(f"date {date} maximum-temp {max_temp} minimum-temp {min_temp} and difference between {difference}")
+    print(f"date {date}"
+          f" max_temperature {max_temperature}"
+          f" min-temperature {min_temperature}"
+          f" and difference between {difference}")
